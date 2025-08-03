@@ -40,7 +40,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
-  const API_BASE_URL =  "http://localhost:8000";
+  const API_BASE_URL =  "https://chat-with-any-website-using-langchain.onrender.com";
 
   const initSession = async () => {
     if (!websiteUrl) return;
