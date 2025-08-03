@@ -28,13 +28,7 @@ app = FastAPI()
 # ==============================================================================
 # Define the list of "allowed" websites that can talk to your API.
 origins = [
-    # Allow your local development server (for testing)
-    "http://localhost:5173",
-
-    # --- IMPORTANT ---
-    # ADD THE URL OF YOUR DEPLOYED FRONTEND APPLICATION HERE!
-    # Replace the line below with your actual URL from Vercel.
-    "https://chat-with-any-website-using-langcha.vercel.app/"
+    "https://chat-with-any-website-using-langchain-avinash-u-webs-projects.vercel.app/"
 ]
 
 app.add_middleware(
