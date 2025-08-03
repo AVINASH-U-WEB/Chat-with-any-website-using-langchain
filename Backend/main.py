@@ -28,7 +28,7 @@ app = FastAPI()
 # ==============================================================================
 # Define the list of "allowed" websites that can talk to your API.
 origins = [
-    "https://chat-with-any-website-using-langchain-avinash-u-webs-projects.vercel.app/"
+    "https://chat-with-any-website-using-langchain-avinash-u-webs-projects.vercel.app"
 ]
 
 app.add_middleware(
