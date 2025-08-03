@@ -111,7 +111,7 @@ function App() {
         <div className="w-1/3 border-2 border-green-400 p-4 flex flex-col">
           <h2 className="text-xl mb-4">[CONTROL PANEL]</h2>
           <div className="mb-4">
-            <label className="block mb-1">> Target URL:</label>
+            <label className="block mb-1"> >Target URL: </label>
             <input
               type="text"
               value={websiteUrl}
@@ -161,7 +161,7 @@ function App() {
 
           <div className="p-2 border-t-2 border-green-400">
             <div className="flex items-center">
-              <span className="mr-2">></span>
+              <span className="mr-2"> > </span>
               <input
                 type="text"
                 value={userInput}
