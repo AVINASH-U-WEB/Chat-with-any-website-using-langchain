@@ -40,7 +40,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+  const API_BASE_URL =  "http://localhost:8000";
 
   const initSession = async () => {
     if (!websiteUrl) return;

@@ -23,16 +23,30 @@ if not GOOGLE_API_KEY:
 
 app = FastAPI()
 
-# CORS configuration
+# ==============================================================================
+# === SECURE CORS CONFIGURATION - THIS IS THE UPDATED SECTION ===
+# ==============================================================================
+# Define the list of "allowed" websites that can talk to your API.
+origins = [
+    # Allow your local development server (for testing)
+    "http://localhost:5173",
+
+    # --- IMPORTANT ---
+    # ADD THE URL OF YOUR DEPLOYED FRONTEND APPLICATION HERE!
+    # Replace the line below with your actual URL from Vercel.
+    "https://chat-with-any-website-using-langcha.vercel.app/"
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,  # Use the specific list of origins
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST"],  # You can restrict to only the methods you use
     allow_headers=["*"],
 )
+# ==============================================================================
 
-# Session storage
+# Session storage (this is simple, for a real app consider Redis or a DB)
 sessions = {}
 
 
